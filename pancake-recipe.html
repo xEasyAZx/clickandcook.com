@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clikc & Cook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/output.css">
+    <!---Fonts--> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gray-200 h-screen">
+    <header class = "bg-white">
+        <nav class="flex justify-between items-center w-[80%] mx-auto p-5">
+            <div>
+                <img class="w-24" src="./img/logo.png" alt="logo" />
+            </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li class="hover:text-gray-500 cursor-pointer hover:font-semibold">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="hover:text-gray-500 cursor-pointer hover:font-semibold">
+                        <a href="recipies.html">Recipes</a>
+                    </li>
+                    <li class="hover:text-gray-500 cursor-pointer hover:font-semibold">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="hover:text-gray-500 cursor-pointer hover:font-semibold">
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>            
+            <div class="flex items-center gap-6">
+                <a href="newsletter.html">
+                    <button class="bg-orange-400 text-white px-5 py-2 rounded-full hover:bg-orange-600">Free Recipies</button>
+                </a>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
+            </div>
+        </nav>
+        <section class="relative">
+            <div>
+                <img class="w-full h-screen object-cover" src="./img/fluffypancakes.jpg" alt="hero" />
+            </div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center bg-black bg-opacity-50">
+                <h1 class="text-4xl font-bold text-white">Fluffy Pancakes</h1>
+                <p class="text-xl text-gray-300 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero at mauris rutrum consectetur.</p>
+            </div>
+        </section>   
+    </header>
+    <!--pancaes recipe --->
+    <!-- Ingredients Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Pancake Ingredients</h2>
+        <p class="text-lg text-gray-600 mb-6">You'll likely already have everything you need to make this pancake recipe. If not, here's what to add to your grocery list:</p>
+
+        <ul class="list-disc pl-8 text-gray-700 space-y-3">
+            <li>Flour: This homemade pancake recipe starts with all-purpose flour.</li>
+            <li>Baking powder: Baking powder, a leavener, is the secret to fluffy pancakes.</li>
+            <li>Sugar: Just a tablespoon of white sugar is all you'll need for subtly sweet pancakes.</li>
+            <li>Salt: A pinch of salt will enhance the overall flavor without making your pancakes taste salty.</li>
+            <li>Milk and butter: Milk and butter add moisture and richness to the pancakes.</li>
+            <li>Egg: A whole egg lends even more moisture. Plus, it helps bind the pancake batter together.</li>
+        </ul>
+    </section>
+
+    <!-- Instructions Section -->
+    <section class="container mx-auto px-6 py-12 bg-gray-100">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">How to Make Pancakes From Scratch</h2>
+        <p class="text-lg text-gray-600 mb-6">It's not hard to make homemade pancakes — you just need a good recipe. Here's a brief overview of what you can expect:</p>
+
+        <ol class="list-decimal pl-8 text-gray-700 space-y-3">
+            <li>Sift the dry ingredients together.</li>
+            <li>Make a well, then add the wet ingredients. Stir to combine.</li>
+            <li>Scoop the batter onto a hot griddle or pan.</li>
+            <li>Cook for two to three minutes, then flip.</li>
+            <li>Continue cooking until brown on both sides.</li>
+        </ol>
+    </section>
+
+    <!-- Flip Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">When to Flip Pancakes</h2>
+        <p class="text-lg text-gray-600 mb-6">Your pancake will tell you when it's ready to flip. Wait until bubbles start to form on the top and the edges look dry and set. This will usually take about two to three minutes on each side.</p>
+    </section>
+
+    <!-- Reheat Section -->
+    <section class="container mx-auto px-6 py-12 bg-gray-100">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">How to Reheat Pancakes</h2>
+        <p class="text-lg text-gray-600 mb-6">Store leftover pancakes in an airtight container in the fridge for about a week. Refrain from adding toppings (such as syrup) until right before you serve them so the pancakes don't get soggy.</p>
+    </section>
+
+    <!-- Save Batter Section -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Can You Save Pancake Batter?</h2>
+        <p class="text-lg text-gray-600 mb-6">Don't let leftover pancake batter go to waste! Store the batter in an airtight container in the fridge for up to two days. If you plan to keep it longer than that, it's best to freeze the batter.</p>
+    </section>
+
+    <!-- Freezing Pancakes Section -->
+    <section class="container mx-auto px-6 py-12 bg-gray-100">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Can You Freeze Pancakes?</h2>
+        <p class="text-lg text-gray-600 mb-6">Yes, you can freeze pancakes and pancake batter.</p>
+
+        <div class="space-y-4">
+            <h3 class="text-2xl font-semibold text-gray-800">To freeze cooked pancakes:</h3>
+            <p class="text-lg text-gray-600">Allow the pancakes to cool completely, then arrange them in a single layer on a baking sheet (make sure the edges aren't touching). Flash freeze for a few hours or up to overnight. Reheat in an oven set to 350°F until warmed through.</p>
+
+            <h3 class="text-2xl font-semibold text-gray-800">To freeze pancake batter:</h3>
+            <p class="text-lg text-gray-600">Ladle the pancake batter in serving-size portions into freezer bags, then wrap the bags in foil. Freeze flat for up to one month. Thaw in the refrigerator overnight.</p>
+        </div>
+    </section>
+    
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-6xl mx-auto p-10">
+            <!-- Top Section -->
+            <div class="flex flex-wrap justify-between items-center">
+                <!-- About Us Section -->
+                <h2 class="text-lg font-bold">About Us</h2>
+    
+                <!-- Links Section -->
+                <ul class="flex gap-6 text-sm">
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Contact</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Press</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Terms & Conditions</a></li>
+                    <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy Policy</a></li>
+                </ul>
+    
+                <!-- Social Media Icons -->
+                <div class="flex gap-4 text-xl text-gray-500">
+                    <a href="#" class="hover:text-orange-500 transition-colors">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="#" class="hover:text-orange-500 transition-colors">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Bottom Section -->
+            <div class="text-center text-sm text-gray-600 mt-6">
+                <p>Copyright © 2023 Recipe Box. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        const navlinks = document.querySelector('.nav-links');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('top-[9%]')
+            }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
